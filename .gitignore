@@ -1,0 +1,14 @@
+# Node.js (React)
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# Rust (Future Backend)
+target/
+Cargo.lock
+
+# General
+.DS_Store
+.idea/
+.vscode/
+

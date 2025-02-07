@@ -1,0 +1,42 @@
+.dropdownMenu {
+  background-color: white;
+  color: #E0E0E0
+}
+
+
+.options {
+  display: none;
+  position: absolute;
+  background-color: #1E1E1E;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+
+.dropdownMenu:hover .options {
+  display: block;
+}
+
+.dropItem {
+  margin: 5px;
+  cursor: pointer;
+
+}
+
+
+
+
+.dropItem:hover {
+  text-decoration: underline;
+}
+
+.dropBtn {
+  background-color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
