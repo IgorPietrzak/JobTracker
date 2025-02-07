@@ -1,5 +1,5 @@
 import styles from "./Job.module.css";
-import StatusPicker from "../StatusPicker";
+import StatusPicker from "../../components/StatusPicker/StatusPicker";
 import { useState } from "react";
 import colours from "../../colours.json";
 
@@ -33,6 +33,7 @@ function Job(props: JobProps) {
   let title = props.title.length > 40 ? props.title.slice(0, 20) + "..." : props.title;
   let url = props.url.length > 40 ? props.url.slice(0, 20) + "..." : props.url;
 
+  // will have to update the DB here when backend ready.
   function handleStatus(status: string): void {
     setStatus(status);
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./StatusPicker.module.css";
-import colours from "../colours.json";
+import colours from "../../colours.json";
 
 /*
 
