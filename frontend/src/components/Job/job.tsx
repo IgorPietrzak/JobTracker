@@ -2,6 +2,7 @@ import styles from "./Job.module.css";
 import StatusPicker from "../../components/StatusPicker/StatusPicker";
 import { useState } from "react";
 import colours from "../../colours.json";
+import JobProps from "../../types.ts";
 
 /*
 
@@ -13,15 +14,10 @@ Features:
 
 */
 
-interface JobProps {
-  title: string;
-  url: string;
-  date: Date;
-}
 
 function Job(props: JobProps) {
-
-  const [status, setStatus] = useState("Waiting");
+    
+  const [status, setStatus] = useState(props.status);
 
   // Date setup
   let date = props.date;
@@ -30,8 +26,8 @@ function Job(props: JobProps) {
   let day = date.getDate();
 
   // trim long titles and URLs
-  let title = props.title.length > 40 ? props.title.slice(0, 20) + "..." : props.title;
-  let url = props.url.length > 40 ? props.url.slice(0, 20) + "..." : props.url;
+  let title = props.job.length > 20 ? props.job.slice(0, 20) + "..." : props.job;
+  let url = props.url.length > 20 ? props.url.slice(0, 20) + "..." : props.url;
 
   // will have to update the DB here when backend ready.
   function handleStatus(status: string): void {
@@ -65,7 +61,7 @@ function Job(props: JobProps) {
         <p>{`${day} - ${month} - ${year}`}</p>
       </div>
       <div className={styles.jobField}>
-        <StatusPicker onStatusChange={handleStatus} options={["Waiting", "Interview", "Rejected", "Success"]} />
+        <StatusPicker onStatusChange={handleStatus} initial_status={status}  options={["Waiting", "Interview", "Rejected", "Success"]} />
       </div>
     </div>
   );

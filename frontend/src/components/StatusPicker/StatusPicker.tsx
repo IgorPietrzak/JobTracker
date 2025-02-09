@@ -16,11 +16,12 @@ Can in theory use this for a picker with different options but needs refactoring
 interface StatusPickerProps {
   onStatusChange: (status: string) => void;
   options: string[];
+  initial_status: string;
 }
 
 
-function StatusPicker({ onStatusChange, options }: StatusPickerProps) {
-  const [status, setStatus] = useState("Waiting");
+function StatusPicker({ onStatusChange, options, initial_status }: StatusPickerProps) {
+  const [status, setStatus] = useState(initial_status);
 
 
   // pass it up to parent
