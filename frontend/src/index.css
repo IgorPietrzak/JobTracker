@@ -11,14 +11,15 @@ html {
   min-height: 100vh;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #121212;
+  color: #36454F; /* Charcoal gray text */
+  background-color: #FFFFFF; /* Light background for contrast */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 a {
   font-weight: 500;
