@@ -2,12 +2,16 @@
 export interface JobProps {
   job: string;
   url: string;
-  date: Date;
+  date: string;
   status: string;
 }
 
 export interface JobListProps {
   jobs: JobProps[];
+}
+
+export interface TextInputProps {
+  text: string
 }
 
 

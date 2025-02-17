@@ -9,12 +9,10 @@ Retireved jobs JSON from database and spawn Job components.
 */
 
 function JobList(props: JobListProps) {
-  console.log(props);
   return (
   <div className={styles.jobList}>
       {props.jobs.map((job,index) => {
-        const date = new Date(job.date_applied);
-        return <Job key = {index} job = {job.job} url = {job.url} date = {date} status = {job.status}  />
+        return <Job key = {index} job = {job.job} url = {job.url} date = {job.date_applied} status = {job.status}  />
       })}
     </div>
   )

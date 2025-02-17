@@ -19,12 +19,6 @@ function Job(props: JobProps) {
     
   const [status, setStatus] = useState(props.status);
 
-  // Date setup
-  let date = props.date;
-  let year = date.getFullYear();
-  let month = date.getMonth() + 1;
-  let day = date.getDate();
-
   // trim long titles and URLs
   let title = props.job.length > 20 ? props.job.slice(0, 20) + "..." : props.job;
   let url = props.url.length > 20 ? props.url.slice(0, 20) + "..." : props.url;
@@ -48,17 +42,17 @@ function Job(props: JobProps) {
 
   return (
     <div className={styles.job} style={{ backgroundColor: getBackgroundColor() }}>
-      <div className={styles.jobField} style={{ color: status === "Interview" || status === "Rejected" ? "white" : "#213547" }}>
+      <div className={styles.jobField} >
         <h6>Title</h6>
         <p>{title}</p>
       </div>
-      <div className={styles.jobField} style={{ color: status === "Interview" || status === "Rejected" ? "white" : "#213547" }}>
+      <div className={styles.jobField} >
         <h6>URL</h6>
         <a href={props.url}>{url}</a>
       </div>
-      <div className={styles.jobField} style={{ color: status === "Interview" || status === "Rejected" ? "white" : "#213547" }}>
+      <div className={styles.jobField} >
         <h6>Date</h6>
-        <p>{`${day} - ${month} - ${year}`}</p>
+        <p>{props.date}</p>
       </div>
       <div className={styles.jobField}>
         <StatusPicker onStatusChange={handleStatus} initial_status={status}  options={["Waiting", "Interview", "Rejected", "Success"]} />

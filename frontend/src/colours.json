@@ -1,6 +1,8 @@
 {
-  "Waiting": "#FF9E00",
-  "Interview": "#457B9D",
-  "Success": "#2A9D8F",
-  "Rejected": "#E63946"
+  "Waiting": "#FFD8A8",
+  "Interview": "#BFD7ED",
+  "Success": "#A8E6CF",
+  "Rejected": "#F4A8A8"
 }
+
+

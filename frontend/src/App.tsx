@@ -1,6 +1,6 @@
 import './App.css'
-import JobList from "./components/JobList/JobList.tsx";
-import jobs from "./jobs.json";
+import Tracker from "./components/Tracker/Tracker.tsx";
+
 
 
 
@@ -8,8 +8,8 @@ function App() {
 
   return (
     <div>
-     <JobList jobs = {jobs}  /> 
-    </div>
+      <Tracker />
+     </div>
   )
 }
 

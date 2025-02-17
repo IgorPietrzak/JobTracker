@@ -1,0 +1,32 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn {
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  background-color: #457B9D; /* Matches your 'Interview' color */
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  background-color: #356384; /* Darker shade for hover effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  background-color: #2A4D66; /* Even darker when clicked */
+  transform: scale(0.98);
+}
+
