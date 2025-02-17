@@ -1,4 +1,6 @@
 # Work in progress...
 ## Current State
-Made a start on the frontend by creating the first
-version of a job application component. Analogous to a row in excel.
+Job components ready. Working on adding Jobs UI before moving onto the Rust + SQL backend.
+
+### Preview:
+![Video](demo.mp4)
